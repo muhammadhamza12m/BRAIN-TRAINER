@@ -1,0 +1,117 @@
+body{
+    margin-top: 0;
+}
+.input{
+       background-color: white;
+       border: #23394a;
+       color:   white;
+   opacity:  1;
+     }
+
+
+     input.input:hover {
+   background-color: white;
+}
+       
+       h1{
+           font-size: 25px;
+           color: white; 
+           margin-top: 40px;
+           width: 75%;
+       }    
+       
+       h2{
+           font-size: 19px; 
+           width: 75%;
+           color: white;
+       }
+       .a1{
+           color: white; 
+           margin-left: 40px;
+           border-bottom: 2px solid gray; 
+           font-weight: bold;
+           padding-bottom: 5px;
+       }
+       .a2{
+           margin-left: 40px;
+           color: white ;
+           border-bottom: 2px solid white;
+           padding-bottom: 5px;
+       }
+       .a2:hover{
+           text-decoration: none;
+       }
+       .a1:hover{
+           text-decoration: none;
+       }
+       a{
+           margin-left: 26px;color: white;
+         
+       }
+       a:hover, a:focus{
+                
+               color:white;
+       }
+       .register{
+           background-color: white;
+           color: #23394a;
+       }
+       .register:hover{
+           
+           border-color: white;
+       }
+
+
+
+
+     .a11{
+           color: white; 
+           margin-left: 40px;
+           border-bottom: 2px solid white; 
+           font-weight: bold;
+           padding-bottom: 5px;
+       }
+       .a22{
+           margin-left: 40px;
+           color: white ;
+           border-bottom: 2px solid darkgray;
+           padding-bottom: 5px;
+       }
+       .a22:hover{
+           text-decoration: none;
+       }
+      
+       a{
+           margin-left: 26px;color: white;
+         
+       }
+       a:hover, a:focus{
+                
+               color:white;
+       }
+       .login{
+           background-color: white;
+           color: #23394a;
+       }
+       .login:hover{
+           
+           border-color: white;
+       }
+  .mainrow{
+      background-color: #064e89;
+  }
+  .condiv{
+      width: 80%;
+  }
+  .bg{
+      width: 100%;
+      height: 100%;
+  }
+  .forgot{
+      margin-left: 26px;
+      color: white;
+  }
+  .with{
+
+    color: white;
+  }

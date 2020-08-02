@@ -1,0 +1,61 @@
+ 
+ body, html {
+  height: 100%;
+  margin: 0;
+}
+.mainbg{
+
+background-image: url(bg.jpg); 
+ height: 100%;
+  width: 100%;
+ background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 88px;
+  padding-bottom: 120px;
+}
+.smain{
+    background-color: transparent;
+    border: white solid;
+    border-radius: 10px;
+   width: fit-content;
+ padding-top: 25px;
+ 
+}
+h1{
+    width: 80%;
+    font-size: 150%;
+    font: bold ;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+
+    
+}
+.h2{
+    width: 80%;
+    font-size: 130%;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+.f2:hover{
+    background-color: lightgrey;
+    
+    opacity:1.0;
+}
+button{
+    background-color: darkslategray;
+    color: white;
+    margin: 0;
+    width: max-content;
+}
+.a1{
+    margin-left: 25px;
+}
+
+h1{
+  color: white;
+}
+
+.si{
+    width: 80%;
+}
