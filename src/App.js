@@ -17,6 +17,7 @@ import StagesofQuiz from './components/Stages/StagesofQuiz';
 import Quizlayout1 from './components/Quizlayout/quizlayout1';
 import Profile from './components/Profile/Profile';
 
+import Questions from './components/QuizScreen/Questions/Questions';
 function App() {
   return (
    /* <Router>
@@ -44,6 +45,7 @@ function App() {
 
         <Switch>
 
+          <Route path= '/quizScreen' component={Questions}></Route>
           <Route path='/login' exact component={MainFile}></Route>
           <Route path="/admin" component={Adminlogin} ></Route>
           <Route path="/panel" component={Navigation} ></Route>

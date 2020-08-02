@@ -13,11 +13,12 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
 
+
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
   },
-  backButton: {
+  card: {
     marginRight: theme.spacing(1),
   },
   instructions: {
@@ -30,77 +31,53 @@ function getSteps() {
   return ['Select master blaster campaign settings', 'Create an ad group', 'Create an ad','333','cxzcz','dsada','sdada'];
 }
 
-function getStepContent(stepIndex) {
-  switch (stepIndex) {
-    case 0:
-      return 'Select campaign settings...';
-    case 1:
-      return 'What is an ad group anyways?';
-    case 2:
-      return 'This is the bit I really care about!';
-   case 3:
-      return 'This is the bit I really care about!';
-    default:
-      return 'Unknown stepIndex';
-  }
-}
 
 
 const StagesofQuiz = () => {
-  const classes = useStyles();
-  const [activeStep, setActiveStep] = React.useState(0);
-  const steps = getSteps();
 
-  const handleNext = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep + 1);
-  };
-
-  const handleBack = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep - 1);
-  };
-
-  const handleReset = () => {
-    setActiveStep(0);
-    };
+  
     
     return (
 
-    <div className={classes.root} >
-      <Stepper activeStep={activeStep} alternativeLabel>
-        {steps.map((label) => (
-          <Step key={label}>
-            <StepLabel>{label}</StepLabel>
-          </Step>
-        ))}
-            </Stepper>
-           
       <div>
-        {activeStep === steps.length ? (
-          <div>
-            <Typography className={classes.instructions}>All steps completed</Typography>
-            <Button onClick={handleReset}>Reset</Button>
-          </div>
-        ) : (
-          <div>
-            <Typography className={classes.instructions}>{getStepContent(activeStep)}</Typography>
-            <div>
-              <Button
-                disabled={activeStep === 0}
-                onClick={handleBack}
-                className={classes.backButton}
-              >
-                Back
-              </Button>
-              <Button variant="contained" color="primary" onClick={handleNext}>
-                {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
-              </Button>
-            </div>
-          </div>
-        )}
+      <nav className="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+  <a className="navbar-brand" href="#">Logo</a>
+  <ul className="navbar-nav">
+    <li className="nav-item active">
+      <a className="nav-link" href="#">Active</a>
+    </li>
+    <li className="nav-item">
+      <a className="nav-link" href="#">Link</a>
+    </li>
+    <li className="nav-item">
+      <a className="nav-link" href="#">Link</a>
+    </li>
+    <li className="nav-item">
+      <a className="nav-link disabled" href="#">Disabled</a>
+    </li>
+  </ul>
+</nav>
+
+        <div className="card" style={{width:"18rem"}}>
+          <div className="card-body">
+            
+    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+           <Link to="/quizScreen" class="card-link">START NOW</Link>
+  </div>
+        </div>
+        <br></br>
+           <div className="card" style={{width:"18rem"}}>
+          <div className="card-body">
+            
+    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <Link to="/quizScreen" class="card-link">START NOW</Link>
+            
+  </div>
+        </div>
+
       </div>
-
-    </div>
-
+    
+      
     );
 }
  
