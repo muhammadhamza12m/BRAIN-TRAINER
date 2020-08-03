@@ -9,11 +9,7 @@ import AddIcon from "@material-ui/icons/Add";
 
 
 const useStyles = makeStyles((theme) => ({
-  addBtn: {
-    position: "absolute",
-    bottom: theme.spacing(2),
-    right: theme.spacing(2),
-  },
+
 }));
 
 
@@ -37,23 +33,21 @@ const Questions = () => {
   };
   // getData();
   React.useEffect(getData, []);
-  console.log("Inside Products Component");
+  console.log("Inside q/a Component");
     return (
        
         <div>
-            
-      <h1>Products</h1>
-      <Fab color="primary" aria-label="add" className={classes.addBtn}>
-        <AddIcon />
-      </Fab>
+ 
+   
       {questions.length ==0 ? (
-        <p>There are no products</p>
+        <p>There is no data</p>
       ) : (
-        <Grid container spacing={3}>
+      
+                <div>
           {questions.map((question, index) => (
-            <QuestionModel key={index} product={question} />
+            <QuestionModel key={index} question={question} />
           ))}
-        </Grid>
+       </div>
       )}
     </div>
     );

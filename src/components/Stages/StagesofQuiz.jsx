@@ -6,12 +6,7 @@ import image3 from './3.PNG';
 import { Link } from 'react-router-dom';
 
 import { makeStyles } from '@material-ui/core/styles';
-import Stepper from '@material-ui/core/Stepper';
-import Step from '@material-ui/core/Step';
-import StepLabel from '@material-ui/core/StepLabel';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
-
+import MenuBar from '../../components/QuizScreen/TopMenu';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -40,23 +35,8 @@ const StagesofQuiz = () => {
     return (
 
       <div>
-      <nav className="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
-  <a className="navbar-brand" href="#">Logo</a>
-  <ul className="navbar-nav">
-    <li className="nav-item active">
-      <a className="nav-link" href="#">Active</a>
-    </li>
-    <li className="nav-item">
-      <a className="nav-link" href="#">Link</a>
-    </li>
-    <li className="nav-item">
-      <a className="nav-link" href="#">Link</a>
-    </li>
-    <li className="nav-item">
-      <a className="nav-link disabled" href="#">Disabled</a>
-    </li>
-  </ul>
-</nav>
+        <MenuBar></MenuBar>
+      
 
         <div className="card" style={{width:"18rem"}}>
           <div className="card-body">

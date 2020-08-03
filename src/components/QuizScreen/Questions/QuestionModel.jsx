@@ -1,14 +1,41 @@
 import React from "react";
-import { Grid } from "@material-ui/core";
-const QuestionModel = ({question}) => {
-    return (
+import { colors, Grid } from "@material-ui/core";
 
-        <Grid item xs={4}>
-      <h2>{question.name}</h2>
-      <p>{question.price}</p>
-      <hr />
-    </Grid>
+import { blue } from "@material-ui/core/colors";
+const QuestionModel = ({question}) => {
+    
+  return (
+
+      <div>
+        
+        <br></br>
+
+        <div className="container">
+          <h3 className="" style={{ paddingLeft: 1, }}>{question.question}</h3>
+          
+           <label class="radio-inline">
+      <input type="radio" name="optradio"/>&#160; &#160; {question.optionA}
+          </label>
+<br></br>
+            <label class="radio-inline">
+      <input type="radio" name="optradio"/>&#160; &#160; {question.optionB}
+          </label>
+ <br></br>
+            <label class="radio-inline">
+      <input type="radio" name="optradio"/>&#160; &#160; {question.optionC}
+          </label>
+<br></br>
+            <label class="radio-inline">
+      <input type="radio" name="optradio"/>&#160; &#160; {question.optionD}
+          </label>
+
+
+      </div>
+      
+    </div>
+    
     );
 }
+
  
 export default QuestionModel;
