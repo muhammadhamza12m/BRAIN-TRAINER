@@ -2,9 +2,6 @@ import React from 'react';
 import { Button } from 'react-bootstrap';
 import "bootstrap/dist/css/bootstrap.css";
 import Navigation from "./components/Navigation";
-import Dashboard from "./components/Dashboard";
-import AddnewQuiz from './components/AddnewQuiz';
-import ViewActiveQuiz from './components/ViewActiveQuiz';
 import Result from './components/Result';
 import User from './components/User';
 import Logout from './components/Logout';
@@ -45,6 +42,7 @@ function App() {
 
         <Switch>
 
+        
           <Route path= '/quizScreen' component={Questions}></Route>
           <Route path='/login' exact component={MainFile}></Route>
           <Route path="/admin" component={Adminlogin} ></Route>

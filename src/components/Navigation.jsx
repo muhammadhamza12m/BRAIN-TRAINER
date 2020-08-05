@@ -10,7 +10,7 @@ import ViewActiveQuiz from './ViewActiveQuiz';
 import Result from './Result';
 import User from './User';
 import Logout from './Logout';
-
+import quizalladmin from './ShowQs';
 
 
 const Navigation = () => {
@@ -41,11 +41,18 @@ const Navigation = () => {
                         
                     <li>
                         <Link to="/AddnewQuiz">
-
                             <span><i className="fa fa-envelope"></i></span>
                             <span>Add new Quiz</span>
                         </Link>
-                        </li>
+                            </li>
+                            
+                             <li>
+                        <Link to="/ViewQuestions">
+                            <span><i className="fa fa-envelope"></i></span>
+                            <span>View Questions</span>
+                        </Link>
+                            </li>
+                            
                         
                     <li className="active">
                         <Link to="/ViewActiveQuiz">
@@ -77,12 +84,15 @@ const Navigation = () => {
             </nav>
                 </div>
                 <Switch>
-                       <Route path="/Dashboard" component={Dashboard} ></Route>
+                  
+                    
           <Route path="/AddnewQuiz" component={AddnewQuiz} ></Route>
           <Route path="/ViewActiveQuiz" component={ViewActiveQuiz} ></Route>
           <Route path="/Result" component={Result} ></Route>
           <Route path="/Users" component={User} ></Route>
-          <Route path="/Logout" component={Logout} ></Route>
+                    <Route path="/Logout" component={Logout} ></Route>
+                    <Route path='/ViewQuestions' component={quizalladmin}></Route>
+                       <Route path="/Dashboard" component={Dashboard} ></Route>
                 </Switch>
 </div>
 </Router>
