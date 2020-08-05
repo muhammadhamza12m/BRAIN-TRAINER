@@ -48,7 +48,7 @@ const ShowModel = ({question}) => {
                 
                  onClick={async (e) => {
                   var qq = prompt("write Question here");
-                  question.question = qq;
+                  question.quest = qq;
                   var a = prompt("write  option A");
                   question.optionA = a;
                   var b = prompt("write  option B");
@@ -60,7 +60,7 @@ const ShowModel = ({question}) => {
                   var ans = prompt("write  Answer");
                   question.answer = ans;
                   
-            await   axios.put("https://apirestfuldatabase.herokuapp.com/api/questions/"+ question._id,qq)
+            await   axios.put("https://apirestfuldatabase.herokuapp.com/api/questions/"+ question._id,question.quest + question.optionA)
               .then((res) => {
                 console.log(res.data);
               question.history.put("/questions");

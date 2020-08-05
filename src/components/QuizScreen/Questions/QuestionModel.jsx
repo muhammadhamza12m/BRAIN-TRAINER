@@ -13,7 +13,7 @@ const QuestionModel = ({question}) => {
         <br></br>
 
         <div className="container">
-          <h3 className="" style={{ paddingLeft: 1, }}>{question.question}</h3>
+          <h3 className="" style={{ paddingLeft: 1, }}>{question.quest}</h3>
           
            <label class="radio-inline">
       <input type="radio" name="optradio"/>&#160; &#160; {question.optionA}
