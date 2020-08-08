@@ -1,7 +1,11 @@
 import React from 'react';
 import './RegisterStyling.css';
+import {BrowserRouter as Router, Route, Link, Switch } from  'react-router-dom';
+import axios from "axios";
 
-const LoginUser = () => {
+const LoginUser = (props) => {
+  const [email, setEmail] = React.useState("");
+  const [password, setPassword] = React.useState("");
     return (
         <div>
             
@@ -9,12 +13,27 @@ const LoginUser = () => {
   <div class="form-group">
 
     <div className="col-sm-9">
-      <input  type="email" class="form-control input" id="email" placeholder="E-mail Address" required/>
+              <input type="email" class="form-control input" id="email" placeholder="E-mail Address" required
+               label="email"
+          fullWidth
+          value={email}
+          onChange={(e) => {
+            setEmail(e.target.value);
+                }}
+              />
     </div>
   </div>
   <div className="form-group">
      <div className="col-sm-9">
-      <input type="password" className="form-control input" id="pwd" placeholder="Password"required/>
+              <input type="password" className="form-control input" id="pwd" placeholder="Password" required
+              label="password"
+          type="password"
+          fullWidth
+          value={password}
+          onChange={(e) => {
+            setPassword(e.target.value);
+          }}
+              />
     </div>
   </div>
   <div className="form-group">
@@ -23,7 +42,24 @@ const LoginUser = () => {
   </div>
   <div className="form-group">
     <div className="col-sm-offset-2 col-sm-9">
-      <button type="submit" className="btn btn-primary login">Login</button>
+              <button type="submit" className="btn btn-primary login"
+               variant="contained"
+          color="primary"
+          onClick={(e) => {
+           
+                axios.post("https://apirestfuldatabase.herokuapp.com/api/users/login")
+              .then((res, req) => {
+               
+              
+                console.log(res.data);
+                
+              })
+              .catch((err) => {
+                console.log(err);
+              });
+          }}>
+                
+                Login</button>
       <a  className="forgot" href="#"> forgot Password?</a>
       <br></br><br></br>
       <span className="with">or login with</span>
@@ -34,7 +70,8 @@ const LoginUser = () => {
     </div>
   </div>
 </form>
-
+    
+        
         </div>
 
     );

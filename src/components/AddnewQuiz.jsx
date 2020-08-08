@@ -6,7 +6,7 @@ import { Grid, TextField, Button } from "@material-ui/core";
 
 
 const AddnewQuiz = (props) => {
-  const [quest, setName] = React.useState("");
+  const [question, setName] = React.useState("");
     const [optionA, setA] = React.useState("");
     const [optionB, setB] = React.useState("");
     const [optionC, setC] = React.useState("");
@@ -22,7 +22,7 @@ const AddnewQuiz = (props) => {
         <TextField
           label="question"
           fullWidth
-          value={quest}
+          value={question}
           onChange={(e) => {
             setName(e.target.value);
           }}
@@ -76,7 +76,7 @@ const AddnewQuiz = (props) => {
           color="primary"
           onClick={(e) => {
           
-           axios.post("https://apirestfuldatabase.herokuapp.com/api/questions",{quest,optionA,optionB,optionC,optionD,answer})
+           axios.post("https://apirestfuldatabase.herokuapp.com/api/questions",{question,optionA,optionB,optionC,optionD,answer})
               .then((res) => {
                 console.log(res.data);
                 props.history.push("/questions");

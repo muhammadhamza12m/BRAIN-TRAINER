@@ -1,5 +1,4 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
 import "bootstrap/dist/css/bootstrap.css";
 import Navigation from "./components/Navigation";
 import Result from './components/Result';
@@ -13,7 +12,6 @@ import Adminlogin from './components/AdminLogin/Adminlogin';
 import StagesofQuiz from './components/Stages/StagesofQuiz';
 import Quizlayout1 from './components/Quizlayout/quizlayout1';
 import Profile from './components/Profile/Profile';
-
 import Questions from './components/QuizScreen/Questions/Questions';
 function App() {
   return (
@@ -42,12 +40,16 @@ function App() {
 
         <Switch>
 
+             
         
           <Route path= '/quizScreen' component={Questions}></Route>
-          <Route path='/login' exact component={MainFile}></Route>
+          
           <Route path="/admin" component={Adminlogin} ></Route>
           <Route path="/panel" component={Navigation} ></Route>
-          <Route path='/' component ={StagesofQuiz}></Route>
+      
+           <Route path="/StagesQuiz" exact component={StagesofQuiz} ></Route>
+          <Route path='/' component={MainFile}></Route>
+          
 
         </Switch>
        
