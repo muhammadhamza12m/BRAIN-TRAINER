@@ -13,6 +13,8 @@ import StagesofQuiz from './components/Stages/StagesofQuiz';
 import Quizlayout1 from './components/Quizlayout/quizlayout1';
 import Profile from './components/Profile/Profile';
 import Questions from './components/QuizScreen/Questions/Questions';
+ import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 function App() {
   return (
    /* <Router>
@@ -36,11 +38,12 @@ function App() {
     
     <Router>
       <div>
-        
+        <ToastContainer />
 
         <Switch>
 
              
+          
         
           <Route path= '/quizScreen' component={Questions}></Route>
           

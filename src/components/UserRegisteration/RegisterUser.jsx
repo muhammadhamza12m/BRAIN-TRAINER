@@ -1,18 +1,45 @@
 import React from 'react';
 import './RegisterStyling.css';
 import axios from "axios";
+import {  toast } from 'react-toastify';
+  
 
 const RegisterUser = (props) => {
-  const [email, setEmail] = React.useState("usman.akram@gmail.com");
-  const [password, setPassword] = React.useState("usman");
-  const [name, setName] = React.useState("usman");
+  const [email, setEmail] = React.useState("");
+  const [password, setPassword] = React.useState("");
+  const [name, setName] = React.useState("");
+
+  const RegisterTo = async() => {
+     console.log("working");
+            await axios(
+              {
+                method: "POST",
+                url: "https://apirestfuldatabase.herokuapp.com/api/users/register",
+                data:  { name, email, password }
+}         )
+              .then((res, req) => {
+                toast.success(res.data, {
+        position: toast.POSITION.TOP_RIGHT
+      });
+              props.history.push("/login");
+              })
+              .catch((err) => {
+                console.log(err);
+                toast.error(err.response.data, {
+        position: toast.POSITION.TOP_RIGHT
+      });
+
+              });
+          
+    
+  }
     return (
         <div>
-            <form className="form-horizontal"  id="form">
-  <div className="form-group">
+          
+  <div className="">
 
-     <div className="form-group">   <div class="col-sm-9">
-              <input type="text" className="form-control input" id="name" placeholder="Full Name" required
+     <div className="">   <div class="col-sm-9">
+              <input type="text" className="" id="name" placeholder="Full Name" required
                label="Name"
           
           value={name}
@@ -23,7 +50,7 @@ const RegisterUser = (props) => {
 </div>
 
     <div className="col-sm-9">
-              <input type="email" className="form-control input" id="email" placeholder="E-mail Address" required
+              <input type="email" className="" id="email" placeholder="E-mail Address" required
                label="email"
           
           value={email}
@@ -32,9 +59,9 @@ const RegisterUser = (props) => {
           }}/>
     </div>
   </div>
-  <div className="form-group">
+  <div className="">
      <div className="col-sm-9">
-              <input type="password" className="form-control input" id="pwd" placeholder="Password" required
+              <input type="password" className="" id="pwd" placeholder="Password" required
                label="password"
           type="password"
           
@@ -44,32 +71,19 @@ const RegisterUser = (props) => {
           }}/>
     </div>
   </div>
-  <div className="form-group">
+  <div className="">
     <div className="col-sm-offset-2 col-sm-9">
     </div>
   </div>
-  <div className="form-group">
+  <div className="">
     <div className="col-sm-offset-2 col-sm-9">
-              <button type="submit" className="btn btn-primary register"
-              variant="contained"
-          color="primary"
-          onClick={(e) => {
-          
-            console.log("working");
-               axios.post("https://apirestfuldatabase.herokuapp.com/api/users/register",{ name, email, password })
-              .then((res, req) => {
+            <button type="" className="btn btn-primary login"
+             
+              onClick={() => {
+                 RegisterTo();
+              }
                
-              console.log("working");
-                console.log(res.name);
-                console.log("working");
-                 props.history.push("/register");
-              })
-              .catch((err) => {
-                console.log(err);
-              });
-          
-          
-          }}
+                }
               >Register</button>
                         <br></br><br></br>
 
@@ -79,12 +93,13 @@ const RegisterUser = (props) => {
        <a  href="#">LinkedIn</a>
       
     </div>
-  </div>
-</form>
+        </div>
+        
 
 
         </div>
-    );
+  );
+  
 }
  
 export default RegisterUser;
