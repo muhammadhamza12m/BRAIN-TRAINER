@@ -24,6 +24,7 @@ const Questions = () => {
     axios
       .get("https://apirestfuldatabase.herokuapp.com/api/questions")
       .then((res) => {
+        //console.log(res.data);
           setQuestions(res.data);
           console.log(setQuestions);
       })
@@ -44,10 +45,18 @@ const Questions = () => {
       ) : (
       
                 <div>
-          {questions.map((question, index) => (
+              {
+                questions.map((question, index) => (
             <QuestionModel key={index} question={question} />
-          ))}
-       </div>
+              ))
+              }
+              <br></br>
+             
+              <br></br>
+              <br></br>
+              <br></br>
+            </div>
+          
       )}
     </div>
     );

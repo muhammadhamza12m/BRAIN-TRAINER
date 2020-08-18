@@ -2,7 +2,7 @@ import React from 'react';
 import './mainstyling.css';
 import axios from "axios";
 import { Grid, TextField, Button } from "@material-ui/core";
-
+import { toast } from 'react-toastify';
 
 
 const AddnewQuiz = (props) => {
@@ -79,7 +79,13 @@ const AddnewQuiz = (props) => {
            axios.post("https://apirestfuldatabase.herokuapp.com/api/questions",{question,optionA,optionB,optionC,optionD,answer})
               .then((res) => {
                 console.log(res.data);
+                toast.error("ADDED", {
+        position: toast.POSITION.TOP_RIGHT
+                });
                 props.history.push("/questions");
+
+                 
+                
               })
               .catch((err) => {
                 console.log(err);

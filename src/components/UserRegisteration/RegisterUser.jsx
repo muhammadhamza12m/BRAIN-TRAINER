@@ -15,10 +15,11 @@ const RegisterUser = (props) => {
               {
                 method: "POST",
                 url: "https://apirestfuldatabase.herokuapp.com/api/users/register",
-                data:  { name, email, password }
+                data: { name, email, password }
+                
 }         )
               .then((res, req) => {
-                toast.success(res.data, {
+                toast.error("Registered", {
         position: toast.POSITION.TOP_RIGHT
       });
               props.history.push("/login");

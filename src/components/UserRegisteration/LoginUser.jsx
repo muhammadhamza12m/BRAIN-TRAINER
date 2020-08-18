@@ -2,6 +2,7 @@ import React from 'react';
 import './RegisterStyling.css';
 import {BrowserRouter as Router, Route, Link, Switch } from  'react-router-dom';
 import axios from "axios";
+import { toast } from 'react-toastify';
 
 const LoginUser = (props) => {
   const [email, setEmail] = React.useState("");
@@ -49,14 +50,21 @@ const LoginUser = (props) => {
            
                 axios.post("https://apirestfuldatabase.herokuapp.com/api/users/login",{email,password})
               .then((res, req) => {
-               
+                 props.history.push("/StagesQuiz");
               
-                console.log(res.data);
+                  toast.error(res.data, {
+        position: toast.POSITION.TOP_RIGHT
+                });
                 
                 
               })
               .catch((err) => {
                 console.log(err);
+                  toast.error(err.response.data, {
+        position: toast.POSITION.TOP_RIGHT
+                });
+                
+            
               });
           }}>
                 

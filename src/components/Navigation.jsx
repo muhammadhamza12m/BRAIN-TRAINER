@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import 'react-bootstrap';
 import './mainstyling.css'
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 import Dashboard from "./Dashboard";
 import AddnewQuiz from './AddnewQuiz';
@@ -42,7 +43,7 @@ const Navigation = () => {
                     <li>
                         <Link to="/AddnewQuiz">
                             <span><i className="fa fa-envelope"></i></span>
-                            <span>Add new Quiz</span>
+                            <span>Add new Questions</span>
                         </Link>
                             </li>
                             
@@ -54,19 +55,7 @@ const Navigation = () => {
                             </li>
                             
                         
-                    <li className="active">
-                        <Link to="/ViewActiveQuiz">
-                            <span><i className="fa fa-bar-chart"></i></span>
-                            <span>View active quiz</span>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/Result">
-                            <span><i className="fa fa-credit-card-alt"></i></span>
-                            <span>View Reaults</span>
-                        </Link>
-                        </li>
-                        
+                  
                     <li>
                         <Link to="/Users">
                             <span><i className="fa fa-credit-card-alt"></i></span>

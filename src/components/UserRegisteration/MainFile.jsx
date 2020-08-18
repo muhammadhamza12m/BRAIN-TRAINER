@@ -28,7 +28,9 @@ const MainFile = () => {
                             <Link style={{ textDecoration:"none"}} className="a11"  to ="/login">Login</Link>
         <Link style={{borderColor: "white",fontWeight:"bold"}}className="a22"  to="/register">Register</Link>
                             <br></br><br></br>
-                              <Switch>
+                         
+                            <Switch>
+                                   
           <Route path="/login" component={LoginUser} ></Route>
           <Route path="/register" component={RegisterUser} ></Route>
         </Switch>

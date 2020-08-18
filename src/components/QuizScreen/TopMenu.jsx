@@ -20,11 +20,8 @@ const TopMenu = () => {
             Home
           </Link>
         </Typography>
-        <Typography variant="h6">
-          <Link to="/products" className={classes.link}>
-            Products
-          </Link>
-        </Typography>
+       
+        
         <Typography variant="h6">
           <Link to="/contact-us" className={classes.link}>
             Contact Us
@@ -32,6 +29,7 @@ const TopMenu = () => {
         </Typography>
       </Toolbar>
     </AppBar>
+    
   );
 };
 

@@ -13,7 +13,8 @@ import StagesofQuiz from './components/Stages/StagesofQuiz';
 import Quizlayout1 from './components/Quizlayout/quizlayout1';
 import Profile from './components/Profile/Profile';
 import Questions from './components/QuizScreen/Questions/Questions';
- import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
+ import Summary from './components/QuizScreen/Questions/Summary'
   import 'react-toastify/dist/ReactToastify.css';
 function App() {
   return (
@@ -45,12 +46,13 @@ function App() {
              
           
         
+          <Route path="/Summary" component={Summary} ></Route>
           <Route path= '/quizScreen' component={Questions}></Route>
           
           <Route path="/admin" component={Adminlogin} ></Route>
           <Route path="/panel" component={Navigation} ></Route>
       
-           <Route path="/StagesQuiz" exact component={StagesofQuiz} ></Route>
+           <Route path="/StagesQuiz"  component={StagesofQuiz} ></Route>
           <Route path='/' component={MainFile}></Route>
           
 

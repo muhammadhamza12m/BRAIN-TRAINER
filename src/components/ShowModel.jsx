@@ -5,6 +5,7 @@ axios.defaults.baseURL = "https://apirestfuldatabase.herokuapp.com/api/";
 
 
 
+
 const ShowModel = ({question}) => {
     
   return (
@@ -29,23 +30,23 @@ const ShowModel = ({question}) => {
                <td>{question.answer}</td>
               
               <button
-                //onClick={(e) => {
+                onClick={(e) => {
           
-          //      axios.delete("https://apirestfuldatabase.herokuapp.com/api/questions/"+ question._id)
-          //     .then((res) => {
-          //       console.log(res.data);
-          //      question.history.delete("/questions");
-          //     })
-          //     .catch((err) => {
-          //       console.log(err);
-          //     });
-          // }}
-          //     >
-          //       delete
-          //     </button>
+               axios.delete("https://apirestfuldatabase.herokuapp.com/api/questions/"+ question._id)
+              .then((res) => {
+                console.log(res.data);
+               question.history.delete("/panel");
+              })
+              .catch((err) => {
+                console.log(err);
+              });
+          }}
+              >
+                delete
+              </button>
 
 
-          //     <button
+               <button
                 
           //        onClick={async (e) => {
           //         var qq = prompt("write Question here");

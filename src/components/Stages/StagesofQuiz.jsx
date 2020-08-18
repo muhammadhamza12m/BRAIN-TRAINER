@@ -36,8 +36,8 @@ const StagesofQuiz = () => {
 
       <div>
         <MenuBar></MenuBar>
-      
-
+        <br></br>
+<br></br>
         <div className="card" style={{width:"18rem"}}>
           <div className="card-body">
             
@@ -46,16 +46,11 @@ const StagesofQuiz = () => {
   </div>
         </div>
         <br></br>
-           <div className="card" style={{width:"18rem"}}>
-          <div className="card-body">
-            
-    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <Link to="/quizScreen" class="card-link">START NOW</Link>
-            
-  </div>
+          
+        
         </div>
 
-      </div>
+      
     
       
     );
